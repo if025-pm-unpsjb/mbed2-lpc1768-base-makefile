@@ -44,7 +44,7 @@ Si el proyecto compilo correctamente, en la vista **[Console]** debe indicarse q
 Primero, verificar que el `pyocd-gdbserver` este correctamente configurado en Eclipse:
 * Seleccionar **[Windows > Preferences]** en el menú de Eclipse.
 * En la nueva ventana, seleccionar **[MCU > Global pyOCD Path]** en la lista izquierda.
-* En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable (por ejemplo, en Windows `C:\Python27\Scripts`).
+* En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable, que debe ser la instalación de Python o bien el directorio `pyocd-python` creado con `virtualenv`.
 * Hacer clic en **[Ok]**.
 
 En caso de usar Linux, verificar que no existan problemas de permisos para acceder a la placa, ejecutando `pyocd-tool list`. Si no se encuentra la placa, seguir las instrucciones [en esta página](https://pypi.org/project/pyOCD/).
