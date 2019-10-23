@@ -16,10 +16,10 @@ Clonar el proyecto usando Git:
 
 ## Importar el proyecto en Eclipse
 Una vez clonado localmente, agregar el proyecto en Eclipse:
-* Seleccionar **[File > Makefile project with existing code]**. 
+* Seleccionar **[File > New > Makefile Project with Existing Code]**. 
 * En la nueva ventana:
     * En **[Existing Code Location]** indicar el *path* al proyecto (usar el botón **[Browse...]**).
-    * En **[Toolchain for Indexer]** seleccionar la opción *Cross ARM GCC* (¡importante!).
+    * En **[Toolchain for Indexer]** seleccionar la opción *ARM Cross GCC* (¡importante!).
 
 El proyecto debe aparecer ahora en la vista *Project Explorer*: 
 * Hacer clic derecho sobre el mismo, y seleccionar **[Properties]** en el menú contextual.
