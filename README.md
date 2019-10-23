@@ -23,10 +23,10 @@ Una vez clonado localmente, agregar el proyecto en Eclipse:
 
 El proyecto debe aparecer ahora en la vista *Project Explorer*: 
 * Hacer clic derecho sobre el mismo, y seleccionar **[Properties]** en el menú contextual.
-* En la nueva ventana, seleccionar **[C/C++ Build > Settings]**. En la sección derecha de la ventana, en la pestaña **[Toolchains]**, el campo *Name* debe indicar *GNU MCU Eclipse ARM Embedded GCC (arm-none-eabi-gcc)* o bien *GNU Tools for ARM Embedded Processors*.
-* Hacer clic en **[Ok]**.
+* En la nueva ventana, en la sección izquierda, seleccionar **[C/C++ Build > Settings]**. En la sección derecha de la ventana, hacer clic en la pestaña **[Toolchains]**. Verificar que el campo *Name* indique *GNU MCU Eclipse ARM Embedded GCC (arm-none-eabi-gcc)* o bien *GNU Tools for ARM Embedded Processors*.
+* Hacer clic en **[Apply and Close]**.
 
-Verificar que dentro del proyecto exista el directorio `build`. En caso que no exista, crearlo haciendo clic derecho sobre el proyecto en la vista *Project Explorer*, y seleccionando **[New > Folder]** en el menú contextual.
+Verificar que dentro del proyecto exista el directorio `build`. En caso contrario, crearlo haciendo clic derecho sobre el proyecto en la vista *Project Explorer*, y seleccionando **[New > Folder]** en el menú contextual.
 
 ---
 
@@ -45,7 +45,7 @@ Primero, verificar que el `pyocd-gdbserver` este correctamente configurado en Ec
 * Seleccionar **[Windows > Preferences]** en el menú de Eclipse.
 * En la nueva ventana, seleccionar **[MCU > Global pyOCD Path]** en la lista izquierda.
 * En el campo *Executable* debe indicar `pyocd-gdbserver.exe` (sin la extensión en Linux o MacOS), y el campo *Folder* debe contener el *path* al ejecutable, que debe ser la instalación de Python o bien el directorio `pyocd-python` creado con `virtualenv`.
-* Hacer clic en **[Ok]**.
+* Hacer clic en **[Apply and Close]**.
 
 En caso de usar Linux, verificar que no existan problemas de permisos para acceder a la placa, ejecutando `pyocd-tool list`. Si no se encuentra la placa, seguir las instrucciones [en esta página](https://pypi.org/project/pyOCD/).
 
