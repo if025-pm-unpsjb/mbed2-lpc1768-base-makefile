@@ -4,7 +4,10 @@ BUILD_DIR = ./build
 
 PROJ = blink
 
-OBJECTS += ./main.o
+SRC=$(wildcard ./app/$(PROJ)/*.c)
+CXXSRC=$(wildcard ./app/$(PROJ)/*.cpp)
+OBJECTS += $(CXXSRC:%.cpp=%.o) $(SRC:%.c=%.o)
+
 OBJECTS += ./funcs.o
 
 SYS_OBJECTS += ./mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/analogin_api.o
@@ -107,7 +110,7 @@ SIZE    = $(GCC_BIN)arm-none-eabi-size
 all: $(BUILD_DIR)/$(PROJ).bin size
 
 clean:
-	+@echo "Cleaning files..."
+	+@echo "Cleaning files..."	
 	@rm -f $(BUILD_DIR)/$(PROJ).bin $(BUILD_DIR)/$(PROJ).elf $(OBJECTS) $(DEPS)
 
 .cpp.o:
@@ -119,7 +122,7 @@ $(BUILD_DIR)/$(PROJ).elf: $(OBJECTS) $(SYS_OBJECTS)
 	@$(LD) $(LD_FLAGS) -T$(LINKER_SCRIPT) $(LIBRARY_PATHS) -o $@ $^ $(LIBRARIES) $(LD_SYS_LIBS)
 
 $(BUILD_DIR)/$(PROJ).bin: $(BUILD_DIR)/$(PROJ).elf
-	+@echo "Binary: $@"
+	+@echo "Binary: $@"	
 	@$(OBJCOPY) -O binary $< $@
 	
 size: $(BUILD_DIR)/$(PROJ).elf
