@@ -4,8 +4,8 @@ BUILD_DIR = ./build
 
 PROJ = blink
 
-SRC=$(wildcard ./app/$(PROJ)/*.c)
-CXXSRC=$(wildcard ./app/$(PROJ)/*.cpp)
+SRC=$(wildcard ./apps/$(PROJ)/*.c)
+CXXSRC=$(wildcard ./apps/$(PROJ)/*.cpp)
 OBJECTS += $(CXXSRC:%.cpp=%.o) $(SRC:%.c=%.o)
 
 OBJECTS += ./funcs.o
