@@ -47,3 +47,7 @@ language.settings.xml
 
 # ignore contents of build directory
 build/**
+
+# ignore the Makefile.mine file
+Makefile.mine
+
