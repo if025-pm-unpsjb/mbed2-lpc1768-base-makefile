@@ -10,5 +10,5 @@ pid_t _getpid(void)
 
 void _kill(void)
 {
-        ;
+	;
 }
