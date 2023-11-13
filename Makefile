@@ -194,7 +194,7 @@ clean:
 
 $(BUILD_DIR)/$(PROJ).elf: $(OBJECTS) $(SYS_OBJECTS)
 	+@echo "Linking: $@"
-	@$(LD) $(LD_FLAGS) -T$(LINKER_SCRIPT) $(LIBRARY_PATHS) -o $@ $^ $(LIBRARIES) $(LD_SYS_LIBS)
+	@$(LD) $(LD_FLAGS) -T$(LINKER_SCRIPT) $(LIBRARY_PATHS) -o $@ $^ $(LIBRARIES) $(LD_SYS_LIBS) $(WRAP)
 
 $(BUILD_DIR)/$(PROJ).bin: $(BUILD_DIR)/$(PROJ).elf
 	+@echo "Binary: $@"	

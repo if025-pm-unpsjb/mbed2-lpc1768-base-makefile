@@ -193,7 +193,7 @@ extern "C" {
  * not created if stack monitoring is disabled. TRC_CFG_CTRL_TASK_PRIORITY should
  * be low, to avoid disturbing any time-sensitive tasks.
  */
-#define TRC_CFG_CTRL_TASK_PRIORITY 4
+#define TRC_CFG_CTRL_TASK_PRIORITY 0
 
 /**
  * @def TRC_CFG_CTRL_TASK_DELAY
