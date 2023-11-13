@@ -1,8 +1,5 @@
 ifeq ($(USE_FREERTOS),y)
 
-DEFINES+=USE_FREERTOS
-DEFINES+=TICK_OVER_RTOS
-
 FREERTOS_BASE=./libs/freertos
 
 SRC+=$(wildcard $(FREERTOS_BASE)/*.c)
